@@ -10,3 +10,5 @@ Rscript path/to/add_uniqRegion_to_sampleInfo.R -u U5
 Rscript path/to/add_uniqRegion_to_sampleInfo.R -u U3
 ```
 The script will insert the uniqRegion column information (either U3 or U5, U5 is default) after the ltrBit column.
+
+Dependancies: library(argparse)
