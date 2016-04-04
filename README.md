@@ -5,9 +5,10 @@ The uniqRegion denotes the region of the LTR targeted for amplification when wor
 
 Within the directory for the sampleInfo.tsv, run one of the following lines:
 ```
-Rscript path/to/add_uniqRegion_to_sampleInfo.R
-Rscript path/to/add_uniqRegion_to_sampleInfo.R -u U5
-Rscript path/to/add_uniqRegion_to_sampleInfo.R -u U3
+Rscript path/to/add_uniqRegion_to_sampleInfo.R sampleInfo.tsv
+Rscript path/to/add_uniqRegion_to_sampleInfo.R sampleInfo.csv
+Rscript path/to/add_uniqRegion_to_sampleInfo.R sampleInfo.tsv -u U5
+Rscript path/to/add_uniqRegion_to_sampleInfo.R sampleInfo.tsv -u U3
 ```
 The script will insert the uniqRegion column information (either U3 or U5, U5 is default) after the ltrBit column.
 
