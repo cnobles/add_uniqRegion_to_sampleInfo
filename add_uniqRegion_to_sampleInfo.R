@@ -11,7 +11,7 @@ sampleName <- grep(sampleFile, list.files(path = "."), value = TRUE)
 
 if(grepl(".tsv", sampleName)){
   sampleInfo <- read.csv(sampleName, sep = "\t")
-}else if(grepl(".csv", sampleName){
+}else if(grepl(".csv", sampleName)){
   sampleInfo <- read.csv(sampleName, sep = ",")
 }else{
   message("SampleInfo file not in .tsv or .csv format")
@@ -25,6 +25,6 @@ colNames <- c("alias", "linkerSequence", "bcSeq", "gender", "primer",
 sampleInfo <- sampleInfo[, colNames]
 
 sampleName <- unlist(strsplit(sampleName, split = ".", fixed = TRUE))
-sampleName <- paste(sampleName[1:length(sampleName)], collapse = ".")
+sampleName <- paste(sampleName[1:(length(sampleName)-1)], collapse = ".")
 
-write.table(sampleFile, file = paste0(sampleName, ".tsv"), sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(sampleInfo, file = paste0(sampleName, ".tsv"), sep = "\t", row.names = FALSE, quote = FALSE)
