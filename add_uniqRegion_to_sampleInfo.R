@@ -7,7 +7,7 @@ arguments <- parser$parse_args()
 sampleFile <- arguments$sampleFile
 uniqRegion <- arguments$uniqRegion
 
-sampleName <- grep(sampleFile, list.files(path = "."), value = TRUE)
+sampleName <- grep(sampleFile, list.files(path = "."), value = TRUE, fixed = TRUE)
 
 if(grepl(".tsv", sampleName)){
   sampleInfo <- read.csv(sampleName, sep = "\t")
